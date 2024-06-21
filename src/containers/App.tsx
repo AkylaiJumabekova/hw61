@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CountryList from '../components/CountryList/CountryList';
 import CountryDetails from '../components/CountryDetails/CountryDetails';
+import Weather from '../components/Weather/Weather';
 import './App.css';
 
 interface Country {
@@ -33,6 +34,7 @@ const App: React.FC = () => {
       </div>
       <div className="CountryDetails">
         <CountryDetails countryCode={selectedCountry} />
+        <Weather countryCode={selectedCountry} />
       </div>
     </div>
   );
