@@ -40,11 +40,11 @@ const CountryDetails: React.FC<CountryDetailsProps> = ({ countryCode }) => {
     }, [countryCode]);
 
     if (!countryCode) {
-        return <div>Choode country</div>;
+        return <div>Choose country</div>;
     }
 
     if (!country) {
-        return <div>Loadinf...</div>;
+        return <div>Loading...</div>;
     }
 
     return (

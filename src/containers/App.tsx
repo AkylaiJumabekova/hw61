@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import CountryList from './components/CountryList/CountryList';
-import CountryDetails from './components/CountryDetails/CountryDetails';
+import CountryList from '../components/CountryList/CountryList';
+import CountryDetails from '../components/CountryDetails/CountryDetails';
+import './App.css';
 
 interface Country {
   countryCode: string;
@@ -27,8 +28,12 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <CountryList countries={countries} setSelectedCountry={setSelectedCountry} />
-      <CountryDetails countryCode={selectedCountry} />
+      <div className="CountryList">
+        <CountryList countries={countries} setSelectedCountry={setSelectedCountry} />
+      </div>
+      <div className="CountryDetails">
+        <CountryDetails countryCode={selectedCountry} />
+      </div>
     </div>
   );
 };
